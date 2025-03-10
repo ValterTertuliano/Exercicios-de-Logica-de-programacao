@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="aula-1-media-e-situacao-do-aluno"/>
+        <attribute name="authors" value="valte"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-10 01:55:18 "/>
+        <attribute name="created" value="dmFsdGU7VkFMVEVSU0VSR0lPOzIwMjUtMDMtMTA7IjAxOjE0OjMxICI7MjYzNw=="/>
+        <attribute name="edited" value="dmFsdGU7VkFMVEVSU0VSR0lPOzIwMjUtMDMtMTA7IjAxOjU1OjE4ICI7MTsyNzU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, n3" type="Integer" array="False" size=""/>
+            <declare name="media, recu" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite as notas entre 0 e 10 e evite erros.&quot;" newline="True"/>
+            <output expression="&quot;Informe a Primeira Nota: &quot;" newline="True"/>
+            <input variable="n1"/>
+            <if expression="n1 &gt;= 0 &amp;&amp; n1 &lt;= 10">
+                <then/>
+                <else>
+                    <output expression="&quot;Nota fornecida fora do intervalo permitido !!!&quot;" newline="True"/>
+                    <output expression="&quot;Tente Novamente !!!&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Informe a Segunda Nota: &quot;" newline="True"/>
+            <input variable="n2"/>
+            <if expression="n2 &gt;= 0 &amp;&amp; n2 &lt;= 10">
+                <then/>
+                <else>
+                    <output expression="&quot;Nota fornecida fora do intervalo permitido !!!&quot;" newline="True"/>
+                    <output expression="&quot;Tente Novamente !!!&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Informe a Terceira Nota: &quot;" newline="True"/>
+            <input variable="n3"/>
+            <if expression="n3 &gt;= 0 &amp;&amp; n3 &lt;= 10">
+                <then/>
+                <else>
+                    <output expression="&quot;Nota fornecida fora do intervalo permitido !!!&quot;" newline="True"/>
+                    <output expression="&quot;Tente Novamente !!!&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <assign variable="media" expression="(n1 + n2 + n3) / 3"/>
+            <output expression="&quot; O aluno teve uma M&#201;DIA de &quot; &amp;media" newline="True"/>
+            <if expression="media &gt;= 6">
+                <then>
+                    <output expression="&quot;Aluno Aprovado !!! &quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="media &lt; 6 &amp;&amp; media &gt; 3">
+                <then>
+                    <output expression="&quot;Aluno em recupera&#231;&#227;o !!!&quot;" newline="True"/>
+                    <output expression="&quot;Informe A nota de Recupera&#231;&#227;o !!!&quot;" newline="True"/>
+                    <input variable="recu"/>
+                    <if expression="recu &gt;= 5">
+                        <then>
+                            <output expression="&quot;Aluno Aprovado !!!&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <if expression="media &lt;= 3">
+                <then>
+                    <output expression="&quot;Aluno reprovado e sem recupera&#231;&#227;o !!!&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

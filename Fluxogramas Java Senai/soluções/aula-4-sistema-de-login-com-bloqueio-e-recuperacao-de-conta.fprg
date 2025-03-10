@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="desafio_26_2"/>
+        <attribute name="authors" value="valte"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-10 02:03:11 "/>
+        <attribute name="created" value="dmFsdGU7VkFMVEVSU0VSR0lPOzIwMjUtMDMtMDE7IjAyOjQ4OjQ3ICI7MjY1Mg=="/>
+        <attribute name="edited" value="dmFsdGU7VkFMVEVSU0VSR0lPOzIwMjUtMDMtMTA7IjAyOjAzOjExICI7MjsyNzQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Adicionar dados do usuario"/>
+            <declare name="nomeUsuario, perguntaSeguranca, respostaSeguranca, senhaUsuario" type="String" array="False" size=""/>
+            <assign variable="nomeUsuario" expression="&quot;preferidoDelas&quot;"/>
+            <assign variable="perguntaSeguranca" expression="&quot;Quem &#233; o preferido delas? &quot;"/>
+            <assign variable="respostaSeguranca" expression="&quot;Valtinho&quot;"/>
+            <assign variable="senhaUsuario" expression="&quot;Valtinho&quot;"/>
+            <comment text="declarar variaveis de resposta"/>
+            <declare name="nome, pergunta, resposta, senha" type="String" array="False" size=""/>
+            <comment text="declarar variaveis de controle"/>
+            <declare name="tentativas" type="Integer" array="False" size=""/>
+            <declare name="bloqueado" type="Boolean" array="False" size=""/>
+            <comment text="iniciar sistema"/>
+            <assign variable="tentativas" expression="3"/>
+            <assign variable="bloqueado" expression="false"/>
+            <while expression="tentativas &gt; 0">
+                <output expression="&quot;Tentativas de acesso: &quot; &amp;tentativas" newline="True"/>
+                <output expression="&quot;Informe nome de usuario&quot;" newline="True"/>
+                <input variable="nome"/>
+                <if expression="nome == nomeUsuario">
+                    <then>
+                        <while expression="tentativas &gt; 0">
+                            <output expression="&quot;Digite a senha: &quot;" newline="True"/>
+                            <input variable="senha"/>
+                            <if expression="senha == senhaUsuario">
+                                <then>
+                                    <assign variable="tentativas" expression="0"/>
+                                    <assign variable="bloqueado" expression="true"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Senha incorreta, tente novamente !&quot;" newline="True"/>
+                                    <assign variable="tentativas" expression="tentativas - 1"/>
+                                </else>
+                            </if>
+                        </while>
+                    </then>
+                    <else>
+                        <assign variable="tentativas" expression="tentativas - 1"/>
+                        <output expression="&quot;Usuario n&#227;o indetificado tente novamente !&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <if expression="bloqueado == true">
+                <then>
+                    <output expression="&quot;Acesso liberado&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Acesso bloqueado&quot;" newline="True"/>
+                    <output expression="&quot;Responda a pergunta de seguran&#231;a&quot;" newline="True"/>
+                    <output expression="&quot;Responda&quot; &amp;perguntaSeguranca" newline="True"/>
+                    <input variable="resposta"/>
+                    <if expression="resposta == respostaSeguranca">
+                        <then>
+                            <output expression="&quot;Acesso liberado&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Acesso negado, tente novamente mais tarde&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;Bem vindo: &quot; &amp;nome" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
