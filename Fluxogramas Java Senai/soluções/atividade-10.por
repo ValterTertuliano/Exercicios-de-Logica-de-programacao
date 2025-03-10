@@ -10,7 +10,7 @@ programa {
       contador = contador + n
       n = n - 1 
     }
-  escreva("A soma dos primeiros 'n' numeros: ", contador, "\n")
+    escreva("A soma dos primeiros 'n' numeros: ", contador, "\n")
   }
 }
 
