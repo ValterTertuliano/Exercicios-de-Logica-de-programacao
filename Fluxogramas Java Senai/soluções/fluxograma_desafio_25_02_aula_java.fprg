@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxograma_desafio_25_02_aula_java"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 09:44:09 "/>
+        <attribute name="created" value="QWx1bm87RFNOMTE4MTI1MDIwNTsyMDI1LTAyLTI1OyIwODoxOTozMSAiOzI0NDA="/>
+        <attribute name="edited" value="QWx1bm87RFNOMTE4MTI1MDIwNTsyMDI1LTAyLTI1OyIwOTo0NDowOSAiOzE7MjU1Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, n3, media, recuperacao" type="Real" array="False" size=""/>
+            <output expression="&quot;As notas devem estar em um intervalo de 0 a 10&quot;" newline="True"/>
+            <output expression="&quot;DIGITE N1&quot;" newline="True"/>
+            <input variable="N1"/>
+            <if expression="(n1 &lt;= 10) &amp;&amp; (n1 &gt;= 0)">
+                <then/>
+                <else>
+                    <output expression="&quot;Nota fora do intervalo:&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <output expression="&quot;DIGITE N2&quot;" newline="True"/>
+            <input variable="N2"/>
+            <if expression="(n2 &lt;= 10) &amp;&amp; (n2 &gt;= 0)">
+                <then/>
+                <else>
+                    <output expression="&quot;Nota fora do intervalo: &quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <output expression="&quot;DIGITE N3&quot;" newline="True"/>
+            <input variable="N3"/>
+            <if expression="(n3 &lt;= 10) &amp;&amp; (n3 &gt;= 0)">
+                <then/>
+                <else>
+                    <output expression="&quot;Nota fora do intervalo: &quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+            <assign variable="MEDIA" expression="( N1 + N2 + N3 ) / 3"/>
+            <if expression="MEDIA &gt;= 6">
+                <then>
+                    <output expression="&quot;APROVADO MEDIA: &quot; &amp;media" newline="True"/>
+                </then>
+                <else>
+                    <if expression="MEDIA &gt;= 3">
+                        <then>
+                            <output expression="&quot;Recupera&#231;&#227;o, media: &quot; &amp;media" newline="True"/>
+                            <output expression="&quot;Informe a nota de recupera&#231;&#227;o: &quot;" newline="True"/>
+                            <input variable="recuperacao"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;REPROVADO MEDIA: &quot; &amp;media" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                    <if expression="recuperacao &gt; 5">
+                        <then>
+                            <output expression="&quot;Aprovado pela recupera&#231;&#227;o: &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;REPROVADO MEDIA: &quot; &amp;media" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

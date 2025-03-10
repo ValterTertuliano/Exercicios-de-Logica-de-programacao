@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="li&#231;&#227;o java"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-05 05:14:06 "/>
+        <attribute name="created" value="QWx1bm87RFNOMTE4MTI1MDIwNTsyMDI1LTAzLTA1OyIwNTowNzozMCAiOzI0MzI="/>
+        <attribute name="edited" value="QWx1bm87RFNOMTE4MTI1MDIwNTsyMDI1LTAzLTA1OyIwNToxNDowNiAiOzE7MjU0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="SB, TS, ND" type="Integer" array="False" size=""/>
+            <output expression="&quot;informe salario base&quot;" newline="True"/>
+            <input variable="salario"/>
+            <output expression="&quot;informe tempo de servi&#231;o&quot;" newline="True"/>
+            <input variable="tempodeservi&#231;o"/>
+            <output expression="&quot;nota de desempenho&quot;" newline="True"/>
+            <input variable="nota"/>
+        </body>
+    </function>
+</flowgorithm>

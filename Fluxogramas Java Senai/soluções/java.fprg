@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="java"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-05 02:24:18 "/>
+        <attribute name="created" value="QWx1bm87RFNOMTE4MTI1MDIwNTsyMDI1LTAzLTA1OyIwMToyODowMiAiOzI0MzA="/>
+        <attribute name="edited" value="QWx1bm87RFNOMTE4MTI1MDIwNTsyMDI1LTAzLTA1OyIwMjoyNDoxOCAiOzE7MjU0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="T1, T2, T3, SOMA, M&#201;DIA" type="Integer" array="False" size=""/>
+            <output expression="&quot;informe um tempo&quot;" newline="True"/>
+            <input variable="T1"/>
+            <if expression="T1&gt;0">
+                <then>
+                    <output expression="&quot;INFORME OUTRO TEMPO&quot;" newline="True"/>
+                    <input variable="T2"/>
+                    <if expression="T2&gt;0">
+                        <then>
+                            <output expression="&quot;INFORME OUTRO TEMPO&quot;" newline="True"/>
+                            <input variable="T3"/>
+                            <if expression="T3&gt;0">
+                                <then>
+                                    <assign variable="soma" expression="T1+T2+T3"/>
+                                    <output expression="&quot;a soma dos tempos foi &quot;&amp;soma" newline="True"/>
+                                    <assign variable="m&#233;dia" expression="soma/3"/>
+                                    <output expression="&quot;a m&#233;dia das velocidades foi &quot;&amp;m&#233;dia" newline="True"/>
+                                    <if expression="m&#233;dia &lt;=10">
+                                        <then>
+                                            <output expression="&quot;categoria ouro&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="m&#233;dia&lt;=15">
+                                                <then>
+                                                    <output expression="&quot;categoria prata&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="m&#233;dia &lt;=20">
+                                                        <then>
+                                                            <output expression="&quot;categoria bronze&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="m&#233;dia&gt;20">
+                                                                <then>
+                                                                    <output expression="&quot;desclassificado&quot;" newline="True"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;tempo invalido&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;tempo invalido&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;tempo invalido&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
